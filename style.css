@@ -27,7 +27,6 @@ body {
     color: var(--text-clr);
     display: grid;
     grid-template-columns: auto 1fr;
-
 }
 
 #sidebar {
@@ -91,11 +90,11 @@ body {
 
 
 
-.main {
+main {
     padding: min(30px, 7%);
 }
 
-.main p {
+main p {
     color: var(--secondry-clr);
     margin-top: 5px;
     margin-bottom: 15px;
@@ -111,4 +110,29 @@ body {
 .container h2,
 p {
     margin-top: 1em;
+}
+
+#sidebar svg {
+    flex-shrink: 0;
+    fill: var(--text-clr);
+}
+
+#sidebar a span,
+#sidebar .dropdown-btn span {
+    flex-grow: 1;
+}
+
+#sidebar a:hover,
+#sidebar .dropdown-btn:hover {
+    background: var(--hover-clr);
+}
+
+#sidebar .sub-menu{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+}
+
+#sidebar .sub-menu.show{
+    grid-template-rows: 1fr;
 }
