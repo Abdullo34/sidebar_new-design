@@ -1,3 +1,2 @@
-let menu = document.querySelector('.sub-menu').addEventListener('click', (e) => {
-    menu.toggle('show')
-})
+let btn = document.querySelector('.dropdown-btn')
+
