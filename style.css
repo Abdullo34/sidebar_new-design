@@ -41,8 +41,15 @@ body {
     position: sticky;
     top: 0;
     align-self: start;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+    text-wrap: nowrap;
 }
 
+#sidebar.close{
+    padding: 5px;
+    width: 60px;
+}
 
 #sidebar ul {
     list-style: none;
@@ -127,17 +134,49 @@ p {
     background: var(--hover-clr);
 }
 
-#sidebar .sub-menu{
+#sidebar .sub-menu {
     overflow: hidden;
 }
-#sidebar .sub-menu{
+
+#sidebar .sub-menu {
     display: grid;
     grid-template-rows: 0fr;
     transition: 300ms ease-in-out;
 }
 
+.sub-menu>div {
+    overflow: hidden;
+}
 
-
-#sidebar .sub-menu.show{
+#sidebar .sub-menu.show {
     grid-template-rows: 1fr;
+}
+
+.dropdown-btn svg {
+    transition: 200ms ease;
+}
+
+.rotate svg:last-child {
+    transform: rotate(180deg);
+}
+
+#sidebar .sub-menu a {
+    padding-left: 2em;
+}
+
+#toggle-btn {
+    margin-left: auto;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+    background: none;
+}
+
+#toggle-btn svg{
+    transition: rotate 150ms ease;
+}
+
+#toggle-btn:hover{
+    background-color: var(--hover-clr);
 }
